@@ -24,6 +24,7 @@ pipeline {
 					 timestamps {
                           echo "Deploying stage of code*********************"
                           sh """python buzz/generator.py""" 
+			  sh """sudo yum -y install pip"""
 			  sh """pip install -r buzz/requirements.txt"""
 			  sh """python buzz/app.py"""
 			  
