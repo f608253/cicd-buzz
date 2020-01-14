@@ -23,7 +23,7 @@ pipeline {
                      steps {
 					 timestamps {
                           echo "Deploying stage of code*********************"
-                          sh """python generator.py"""                  
+                          sh """python buzz/generator.py"""                  
 			  sh 'echo "stage" > generatedFile.txt'   
                      }
                 }
